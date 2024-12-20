@@ -27,43 +27,44 @@ public class Main {
 
         Deque<Integer> k = new ArrayDeque<>();
         LinkedList<Integer> list = new LinkedList<>();
-
     }
+
     public static void peek(List61B<String> list) {
         System.out.println(list.getLast());
     }
+
     public static void peek(SLList<Integer> list) {
         System.out.println(list.getFirst());
     }
 
-    public static List<String> getWords(String inputFileName){
-        List<String> lst = new ArrayList<>();
-        In in = new In();
+//    public static List<String> getWords(String inputFileName) {
+//        List<String> lst = new ArrayList<>();
+//        In in = new In();
+//
+//        while (!in.isEmpty()) {
+//            lst.add(in.readString());
+//        }
+//        return lst;
+//    }
 
-        while (!in.isEmpty()){
-            lst.add(in.readString());
-        }
-        return lst;
-    }
-
-    public static Set<String> countUniqueWords(List<String> lst){
+    public static Set<String> countUniqueWords(List<String> lst) {
         Set<String> set = new HashSet<>();
-        for (String s : lst){
+        for (String s : lst) {
             set.add(s);
         }
 //        set.addAll(lst);
         return set;
     }
 
-    public static Map<String, Integer> collectWordCount (List<String> targets, List<String> words){
+    public static Map<String, Integer> collectWordCount(List<String> targets, List<String> words) {
         Map<String, Integer> numberOfTarget = new HashMap<>();
 
-        for (String t : targets){
+        for (String t : targets) {
             numberOfTarget.put(t, 0);
         }
 
-        for (String s : words){
-            if (numberOfTarget.containsKey(s)){
+        for (String s : words) {
+            if (numberOfTarget.containsKey(s)) {
                 numberOfTarget.put(s, numberOfTarget.get(s) + 1);
             }
         }
